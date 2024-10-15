@@ -12,36 +12,37 @@ body {
     margin: 20px 5%;
     display: flex;
     flex-direction: column;
-    height: 95vh; /* Задаем фиксированную высоту для основного блока */
+    height: auto; /* Делаем автоматическую высоту */
+    min-height: 95vh; /* Минимальная высота 95% от высоты экрана */
     background-color: #8b757598;
 }
 
 .sec_block {
-    width: 90%; /* Сокращаем ширину блока для мобильных устройств */
+    width: 90%;
     background-color: #ffffff6b;
     border-radius: 15px;
-    margin: 10px auto; /* Центрируем блок внутри main_block */
-    padding: 10px;
-    height: auto; /* Высота подстраивается под текст */
-    max-height: 40%; /* Ограничиваем максимальную высоту, чтобы не выходил за пределы main_block */
-    overflow-y: auto; /* Добавляем прокрутку, если текст не помещается */
+    margin: 10px auto;
+    padding: 15px;
+    height: auto; /* Высота теперь адаптируется к содержимому */
+    max-height: none; /* Убираем ограничение по высоте */
+    overflow-y: visible; /* Убираем прокрутку текста */
 }
 
 h1 {
-    font-size: 1.5rem; /* Относительный размер заголовка */
+    font-size: 1.5rem; 
     padding-left: 20px;
 }
 
 p {
     padding-left: 10px;
-    font-size: 1rem; /* Размер текста относительно базового размера */
+    font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
 }
 
 #elephant {
     width: 100%;
-    height: 35vh; /* Уменьшаем высоту изображения на десктопах */
-    object-fit: cover; /* Изображение масштабируется без искажения пропорций */
+    height: auto; /* Устанавливаем авто высоту */
+    object-fit: contain; /* Изображение сохраняет пропорции и не обрезается */
     margin-top: 20px;
 }
 
@@ -49,36 +50,38 @@ p {
 @media (max-width: 430px) {
     body {
         margin-top: 0;
-        font-size: 14px; /* Уменьшаем базовый размер шрифта */
+        font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
         padding: 0 10px;
     }
 
     .main_block {
         margin: 0 5%;
-        height: 85vh; /* Уменьшаем высоту основного блока на мобильных */
+        height: auto; /* Автоматическая высота на мобильных */
+        min-height: 85vh; /* Минимальная высота на мобильных */
     }
 
     .sec_block {
         margin: 10px 0;
         width: 100%;
-        height: auto; /* Высота автоматически подстраивается под контент */
-        padding: 10px;
-        max-height: 30%; /* Ограничиваем высоту блока, чтобы он помещался в main_block */
+        height: auto;
+        padding: 15px;
+        max-height: none; /* Убираем ограничение по высоте */
+        overflow-y: visible; /* Убираем прокрутку текста */
     }
 
     h1 {
-        font-size: 5vw; /* Размер шрифта в зависимости от ширины экрана */
+        font-size: 5vw; 
         padding-left: 5%;
     }
 
     p {
         padding-left: 5%;
-        font-size: 4vw; /* Используем vw для адаптации текста */
+        font-size: 4vw;
     }
 
     #elephant {
         width: 100%;
-        height: 20vh; /* Уменьшенная высота изображения на мобильных устройствах */
-        object-fit: cover; /* Изображение сохраняет пропорции */
+        height: auto; /* Высота изображения автоматически подстраивается под ширину */
+        object-fit: contain; /* Изображение не обрезается и сохраняет пропорции */
     }
 }
