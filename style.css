@@ -1,10 +1,14 @@
+/* Основные стили */
 body {
     background-image: url(assets/photo_2023-06-25_21-41-37.jpg);
-    background-size: cover;
+    background-size: cover; /* Изображение будет растягиваться на весь экран */
     background-position: center;
+    background-repeat: no-repeat; /* Убираем повторение изображения */
     margin: 0;
     padding: 0;
     font-size: 16px;
+    height: 100vh; /* Высота body на весь экран */
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
 .main_block {
@@ -12,24 +16,25 @@ body {
     margin: 20px 5%;
     display: flex;
     flex-direction: column;
-    height: auto; /* Делаем автоматическую высоту */
-    min-height: 95vh; /* Минимальная высота 95% от высоты экрана */
-    background-color: #8b757598;
+    height: 100%; /* Высота на 100% родителя (body) */
+    background-color: rgba(139, 117, 117, 0.6); /* Полупрозрачный фон */
+    box-sizing: border-box; /* Включаем отступы и границы в общую высоту */
+    padding: 10px; /* Добавляем отступы */
 }
 
 .sec_block {
     width: 90%;
-    background-color: #ffffff6b;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     margin: 10px auto;
     padding: 15px;
-    height: auto; /* Высота теперь адаптируется к содержимому */
-    max-height: none; /* Убираем ограничение по высоте */
+    height: auto; /* Высота адаптируется под содержимое */
+    flex-grow: 1; /* Заполняет оставшееся пространство в main_block */
     overflow-y: visible; /* Убираем прокрутку текста */
 }
 
 h1 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     padding-left: 20px;
 }
 
@@ -37,12 +42,13 @@ p {
     padding-left: 10px;
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
+    word-wrap: break-word; /* Переносим длинные слова на новую строку */
 }
 
 #elephant {
     width: 100%;
-    height: auto; /* Устанавливаем авто высоту */
-    object-fit: contain; /* Изображение сохраняет пропорции и не обрезается */
+    height: auto; /* Высота автоматически подстраивается под ширину */
+    object-fit: contain; /* Изображение сохраняет пропорции */
     margin-top: 20px;
 }
 
@@ -50,14 +56,16 @@ p {
 @media (max-width: 430px) {
     body {
         margin-top: 0;
-        font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
+        font-size: 14px; /* Уменьшаем размер шрифта на мобильных */
         padding: 0 10px;
+        height: 100vh; /* Высота body на весь экран */
     }
 
     .main_block {
         margin: 0 5%;
-        height: auto; /* Автоматическая высота на мобильных */
-        min-height: 85vh; /* Минимальная высота на мобильных */
+        height: auto;
+        min-height: 85vh; /* Минимальная высота 85% экрана */
+        padding: 10px;
     }
 
     .sec_block {
@@ -65,23 +73,23 @@ p {
         width: 100%;
         height: auto;
         padding: 15px;
-        max-height: none; /* Убираем ограничение по высоте */
+        max-height: 60%; /* Ограничиваем высоту блока, чтобы не выходил за main_block */
         overflow-y: visible; /* Убираем прокрутку текста */
     }
 
     h1 {
-        font-size: 5vw; 
+        font-size: 5vw; /* Размер шрифта в зависимости от ширины экрана */
         padding-left: 5%;
     }
 
     p {
         padding-left: 5%;
-        font-size: 4vw;
+        font-size: 4vw; /* Размер текста подстраивается под ширину экрана */
     }
 
     #elephant {
         width: 100%;
-        height: auto; /* Высота изображения автоматически подстраивается под ширину */
-        object-fit: contain; /* Изображение не обрезается и сохраняет пропорции */
+        height: auto; /* Высота изображения адаптируется под ширину */
+        object-fit: contain; /* Изображение не обрезается */
     }
 }
