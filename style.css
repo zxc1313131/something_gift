@@ -12,36 +12,36 @@ body {
     margin: 20px 5%;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 95vh; /* Задаем фиксированную высоту для основного блока */
     background-color: #8b757598;
 }
 
 .sec_block {
-    width: 95%;
+    width: 90%; /* Сокращаем ширину блока для мобильных устройств */
     background-color: #ffffff6b;
     border-radius: 15px;
-    margin: 20px auto;
-    padding: 15px;
-    height: auto; /* Автоматическая высота для текста */
-    max-height: 50%; /* Ограничение максимальной высоты на 50% */
-    overflow-y: auto; /* Если текст длиннее, добавляется прокрутка */
+    margin: 10px auto; /* Центрируем блок внутри main_block */
+    padding: 10px;
+    height: auto; /* Высота подстраивается под текст */
+    max-height: 40%; /* Ограничиваем максимальную высоту, чтобы не выходил за пределы main_block */
+    overflow-y: auto; /* Добавляем прокрутку, если текст не помещается */
 }
 
 h1 {
-    font-size: 1.8rem; /* Относительный размер заголовка */
+    font-size: 1.5rem; /* Относительный размер заголовка */
     padding-left: 20px;
 }
 
 p {
     padding-left: 10px;
-    font-size: 1rem; /* Относительный размер шрифта */
+    font-size: 1rem; /* Размер текста относительно базового размера */
     font-family: 'Times New Roman', Times, serif;
 }
 
 #elephant {
     width: 100%;
-    height: 40vh; /* Уменьшение высоты изображения */
-    object-fit: cover; /* Чтобы изображение занимало блок по высоте и ширине */
+    height: 35vh; /* Уменьшаем высоту изображения на десктопах */
+    object-fit: cover; /* Изображение масштабируется без искажения пропорций */
     margin-top: 20px;
 }
 
@@ -49,25 +49,25 @@ p {
 @media (max-width: 430px) {
     body {
         margin-top: 0;
-        font-size: 14px; /* Уменьшаем размер шрифта */
+        font-size: 14px; /* Уменьшаем базовый размер шрифта */
         padding: 0 10px;
     }
 
     .main_block {
         margin: 0 5%;
-        height: auto; /* Автоматическая высота */
+        height: 85vh; /* Уменьшаем высоту основного блока на мобильных */
     }
 
     .sec_block {
         margin: 10px 0;
         width: 100%;
         height: auto; /* Высота автоматически подстраивается под контент */
-        padding: 15px;
-        max-height: 60%; /* Максимальная высота секции с текстом */
+        padding: 10px;
+        max-height: 30%; /* Ограничиваем высоту блока, чтобы он помещался в main_block */
     }
 
     h1 {
-        font-size: 4.5vw; /* Размер шрифта в зависимости от ширины экрана */
+        font-size: 5vw; /* Размер шрифта в зависимости от ширины экрана */
         padding-left: 5%;
     }
 
@@ -78,6 +78,7 @@ p {
 
     #elephant {
         width: 100%;
-        height: 30vh; /* Уменьшенная высота изображения на мобильных устройствах */
+        height: 20vh; /* Уменьшенная высота изображения на мобильных устройствах */
+        object-fit: cover; /* Изображение сохраняет пропорции */
     }
 }
