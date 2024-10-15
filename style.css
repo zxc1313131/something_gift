@@ -67,8 +67,8 @@ p{
         height: 65%;
     }
     h1{
-        font-size: 20px;
-        padding-left: 29px
+        font-size: large;
+        padding-left: 10;
     }
     p{
         padding-left: 15px;
@@ -85,7 +85,8 @@ p{
         height: 83vh;
     }
     img {
-      max-width: 100%; /* Изображения не будут выходить за границы экрана */
+        margin-top:10%;
+      max-width: 90%; /* Изображения не будут выходить за границы экрана */
       height: auto;
     }
   
