@@ -3,6 +3,7 @@ body {
     height: auto; 
     background-size: cover;
     margin: 0;
+    background-position: center;
 }
 .main_block {
     border-radius: 20px;
@@ -13,85 +14,72 @@ body {
     background-color: #8b757598;
 }
 .sec_block {
-    /* display: flex; */
-    /* justify-content: center; */
     width: 95%;
     height: 30%;
     background-color: #ffffff6b;
     border-radius: 15px;
     margin: 20px;
 }
-h1{
+h1 {
     font-size: 20px;
     padding-left: 30px;
 }
 .image {
-    /* background-image: url(assets/123.jpg); */
     width: 100%;
     height: 70%;
     justify-content: center;
     display: flex;
-        /* align-items: center; */
 }
-
-p{
+p {
     padding-left: 20px;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
-#elephant{
+#elephant {
     margin-top: 30px;
-    /* width: 100%; */
     height: 90%;
 }
 
-  /* Медиазапрос для iPhone 13 (ширина экрана 390px) */
-  @media (max-width: 430px) {
+/* Медиазапрос для iPhone 14 Pro (ширина экрана до 430px) */
+@media (max-width: 430px) {
     body {
         margin-top: 55px;
         background-size: cover;
         background-position: center;
-        background-image: url(assets/photo_2023-06-25_21-41-37.jpg);
         font-size: 14px;
         padding: 10px;
-        font-size: 14px; /* Уменьшаем размер шрифта */
-        padding: 10px; /* Регулируем отступы */
     }
-    .sec_block{
+
+    .sec_block {
         margin: 4%;
         width: 93%;
-        height: 31%;
+        height: 25%; /* Немного уменьшена высота */
     }
-    #elephant{
-        padding-top: 66px;
-        height: 65%;
+
+    h1 {
+        font-size: 18px; /* Уменьшен размер шрифта для заголовка */
+        padding-left: 10%;
     }
-    h1{
-        font-size: large;
-        padding-left: 10;
+
+    p {
+        padding-left: 5%; /* Регулировка отступов для параграфов */
+        font-size: 16px; /* Уменьшение размера шрифта */
     }
-    p{
-        padding-left: 15px;
-        font-size: auto;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    .container {
-      width: 100%; /* Контейнер будет занимать всю ширину экрана */
-    }
-    .main_block{
+
+    .main_block {
         display: flex;
         justify-content: center;
         margin-top: 50px;
-        height: 83vh;
+        height: 80vh; /* Уменьшение высоты блока */
     }
+
     img {
-        margin-top:25%;
-      max-width: 90%; /* Изображения не будут выходить за границы экрана */
-      height: auto;
+        margin-top: 10%;
+        max-width: 100%; /* Адаптация изображения под ширину */
+        height: auto;
     }
-  
-    /* Пример изменения макета для маленького экрана */
-    .sidebar {
-      display: none; /* Прячем сайдбар на мобильных устройствах */
+
+    .image {
+        height: 60%; /* Уменьшение высоты для адаптации под экран */
     }
 }
