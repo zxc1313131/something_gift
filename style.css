@@ -73,7 +73,7 @@ p {
 
     img {
         max-width: 100%; /* Адаптация изображений */
-        height: auto;
+        height: 50%;
     }
 
     .image {
