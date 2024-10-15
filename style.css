@@ -46,7 +46,7 @@ p{
 }
 
   /* Медиазапрос для iPhone 13 (ширина экрана 390px) */
-  @media (max-width: 390px) {
+  @media (max-width: 430px) {
     body {
         margin-top: 55px;
         background-size: cover;
