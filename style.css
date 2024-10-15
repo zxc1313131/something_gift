@@ -4,7 +4,7 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
-    font-size: 1rem; /* Базовый размер шрифта в относительных единицах */
+    font-size: 1rem; /* Базовый размер шрифта */
 }
 
 .main_block {
@@ -18,10 +18,11 @@ body {
 
 .sec_block {
     width: 95%;
-    height: 30%;
     background-color: #ffffff6b;
     border-radius: 15px;
     margin: 20px;
+    padding: 10px;
+    height: auto; /* Устанавливаем автоматическую высоту для содержания текста */
 }
 
 h1 {
@@ -31,13 +32,13 @@ h1 {
 
 p {
     padding-left: 20px;
-    font-size: 1rem; /* Используем относительные единицы */
+    font-size: 1rem; /* Относительный размер шрифта */
     font-family: 'Times New Roman', Times, serif;
 }
 
 #elephant {
     margin-top: 30px;
-    height: 90%;
+    height: 70%; /* Уменьшаем высоту изображения */
 }
 
 /* Медиазапрос для iPhone 14 Pro и мобильных устройств (ширина до 430px) */
@@ -56,8 +57,8 @@ p {
     .sec_block {
         margin: 10px 0;
         width: 100%;
-        height: auto; /* Высота автоматическая для адаптивности */
-        padding: 10px;
+        height: auto; /* Высота автоматически подстраивается под контент */
+        padding: 15px;
     }
 
     h1 {
@@ -76,6 +77,6 @@ p {
     }
 
     .image {
-        height: auto; /* Автоматическая высота для лучшей адаптации */
+        height: 50%; /* Уменьшаем высоту изображения до 50% */
     }
 }
