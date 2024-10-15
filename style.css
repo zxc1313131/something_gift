@@ -85,7 +85,7 @@ p{
         height: 83vh;
     }
     img {
-        margin-top:10%;
+        margin-top:25%;
       max-width: 90%; /* Изображения не будут выходить за границы экрана */
       height: auto;
     }
