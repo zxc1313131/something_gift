@@ -1,7 +1,7 @@
 /* Основные стили */
 body {
     background-image: url(assets/photo_2023-06-25_21-41-37.jpg);
-    background-size: cover; /* Изображение растягивается на весь экран */
+    background-size: cover; /* Изображение будет растягиваться на весь экран */
     background-position: center;
     background-repeat: no-repeat; /* Убираем повторение изображения */
     margin: 0;
@@ -21,27 +21,30 @@ body {
     background-color: rgba(139, 117, 117, 0.6); /* Полупрозрачный фон */
     box-sizing: border-box;
     padding: 10px;
-    width: 95%; /* Увеличиваем ширину до 95% экрана */
+    width: 90%; /* Увеличили ширину до 90% */
+    max-width: 1200px; /* Максимальная ширина для больших экранов */
 }
 
 .sec_block {
-    width: 90%;
+    width: 100%; /* Блок будет занимать всю ширину main_block */
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     margin: 10px auto;
     padding: 15px;
+    box-sizing: border-box; /* Включаем отступы и границы в расчёт размера */
     height: auto; /* Высота адаптируется под содержимое */
-    flex-grow: 1; /* Заполняет оставшееся пространство в main_block */
     overflow-y: visible; /* Убираем прокрутку текста */
 }
 
 h1 {
     font-size: 1.5rem;
     padding-left: 20px;
+    margin-left: 10px; /* Небольшой отступ слева */
 }
 
 p {
-    padding-left: 10px;
+    padding-left: 20px;
+    margin-left: 10px; /* Небольшой отступ слева */
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
     word-wrap: break-word; /* Переносим длинные слова на новую строку */
@@ -50,7 +53,7 @@ p {
 #elephant {
     width: 100%; /* Изображение растягивается на всю ширину контейнера */
     height: auto; /* Высота автоматически подстраивается под ширину */
-    object-fit: contain; /* Изображение не обрезается, сохраняет пропорции */
+    object-fit: contain; /* Изображение сохраняет пропорции и не обрезается */
     margin-top: 20px;
 }
 
@@ -64,7 +67,7 @@ p {
     }
 
     .main_block {
-        margin: 0 5%;
+        margin: 0 auto;
         height: auto;
         min-height: 85vh; /* Минимальная высота 85% экрана */
         padding: 10px;
@@ -73,7 +76,7 @@ p {
 
     .sec_block {
         margin: 10px 0;
-        width: 100%;
+        width: 100%; /* Блок sec_block теперь точно не выйдет за пределы main_block */
         height: auto;
         padding: 15px;
         max-height: none; /* Убираем ограничение по высоте */
@@ -83,10 +86,12 @@ p {
     h1 {
         font-size: 5vw; /* Размер шрифта в зависимости от ширины экрана */
         padding-left: 5%;
+        margin-left: 5%; /* Отступ слева на мобильных */
     }
 
     p {
         padding-left: 5%;
+        margin-left: 5%; /* Отступ слева на мобильных */
         font-size: 4vw; /* Размер текста подстраивается под ширину экрана */
     }
 
