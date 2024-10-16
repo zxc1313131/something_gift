@@ -1,7 +1,7 @@
 /* Основные стили */
 body {
     background-image: url(assets/photo_2023-06-25_21-41-37.jpg);
-    background-size: cover; /* Изображение будет растягиваться на весь экран */
+    background-size: cover; /* Изображение растягивается на весь экран */
     background-position: center;
     background-repeat: no-repeat; /* Убираем повторение изображения */
     margin: 0;
@@ -13,13 +13,15 @@ body {
 
 .main_block {
     border-radius: 20px;
-    margin: 20px 5%;
+    margin: 20px auto; /* Центрируем блок по горизонтали */
     display: flex;
     flex-direction: column;
-    height: 100%; /* Высота на 100% родителя (body) */
+    height: auto; /* Высота будет зависеть от контента */
+    min-height: 95vh; /* Минимальная высота 95% экрана */
     background-color: rgba(139, 117, 117, 0.6); /* Полупрозрачный фон */
-    box-sizing: border-box; /* Включаем отступы и границы в общую высоту */
-    padding: 10px; /* Добавляем отступы */
+    box-sizing: border-box;
+    padding: 10px;
+    width: 95%; /* Увеличиваем ширину до 95% экрана */
 }
 
 .sec_block {
@@ -46,9 +48,9 @@ p {
 }
 
 #elephant {
-    width: 100%;
+    width: 100%; /* Изображение растягивается на всю ширину контейнера */
     height: auto; /* Высота автоматически подстраивается под ширину */
-    object-fit: contain; /* Изображение сохраняет пропорции */
+    object-fit: contain; /* Изображение не обрезается, сохраняет пропорции */
     margin-top: 20px;
 }
 
@@ -66,6 +68,7 @@ p {
         height: auto;
         min-height: 85vh; /* Минимальная высота 85% экрана */
         padding: 10px;
+        width: 100%; /* Занимаем всю ширину экрана на мобильных */
     }
 
     .sec_block {
@@ -73,7 +76,7 @@ p {
         width: 100%;
         height: auto;
         padding: 15px;
-        max-height: 60%; /* Ограничиваем высоту блока, чтобы не выходил за main_block */
+        max-height: none; /* Убираем ограничение по высоте */
         overflow-y: visible; /* Убираем прокрутку текста */
     }
 
